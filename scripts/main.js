@@ -221,7 +221,7 @@ document.getElementById('rsvpForm').addEventListener('submit', function(e) {
       this.reset();
       alert("Resposta enviada com sucesso.");
     } else {
-      alert("Erro, tente novamente.");
+      alert("Erro, tente novamente. Caso o erro persista, envie os dados para controle@ficaassessoria.com");
     }
   })
   .catch(err => {

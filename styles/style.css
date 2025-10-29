@@ -748,6 +748,13 @@ html {
     margin-top: -2px;
     }
 
+    main header img {
+    backface-visibility: hidden;
+    perspective: 1000px;
+    transform: translate3d(0, 0, 0);
+
+    }
+
 
 main.scrolled header #logo_julia, main.scrolled header #logo_rodrigo, main.scrolled header #logo_et {
     transform: scale(40%);
