@@ -767,7 +767,7 @@ main.scrolled header #logo_julia, main.scrolled header #logo_rodrigo, main.scrol
 
     .grid2 {
         grid-template-columns: repeat(3, 1fr);
-        gap: var(--1un);
+        gap: var(--2un);
     }
 
     .grid2 > *:not(:first-child) {
