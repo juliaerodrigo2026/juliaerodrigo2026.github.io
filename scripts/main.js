@@ -196,3 +196,37 @@ form.addEventListener('submit', function(e) {
         });
 });
 */
+
+//FORM
+document.getElementById('rsvpForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+
+  const formData = new FormData(this);
+  const result = document.getElementById('result');
+  const btnText = document.getElementById('rsvpSubmit');
+  const successMsg = document.getElementById('result');
+
+  // Show loader in button
+  btnText.textContent = 'Enviando...';
+
+  const heysheetURL = "https://app.heysheet.in/api/s/wfzi7pumq0"; 
+
+  fetch(heysheetURL, {
+    method: "POST",
+    body: formData
+  })
+  .then(res => {
+    btnText.textContent = 'Enviar';
+    if (res.ok) {
+      this.reset();
+      alert("Resposta enviada com sucesso.");
+    } else {
+      alert("Erro, tente novamente.");
+    }
+  })
+  .catch(err => {
+    btnText.textContent = 'Enviar';
+    console.error(err);
+    alert("Erro, tente novamente.");
+  });
+});
