@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="styles/reset.css">
+	<link rel="stylesheet" href="styles/style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+	<title>Júlia & Rodrigo</title>
+</head>
+
+<body class="home">
+
+	<nav>
+		<ul>
+			<li><a href="#sobre">[01] Sobre</a></li>
+			<li><a href="#rsvp">[02] RSVP</a></li>
+			<li><a href="#dicas">[03] Dicas</a></li>
+			<li><a href="#contribuicao">[04] De/Para</a></li>
+		</ul>
+	</nav>
+
+	<main>
+
+		<header>
+			<img id="logo_julia" src="assets/logos/logo_julia.svg">
+						<img id="logo_et" src="assets/logos/logo_et.svg">
+			<img id="logo_rodrigo" src="assets/logos/logo_rodrigo.svg">
+		</header>
+
+		<section class="grid" id="video">
+			<video class="main_video" poster="/imgs/home_video.jpg" src="/imgs/home_video.mp4" playsinline nocontrols autoplay loop muted></video>
+		</section>
+
+		<section class="grid" id="sobre">
+			<div class="spanhalf empty">
+			</div>
+			<div class="spanhalf">
+				<h2>[01] SOBRE</h2>
+				<p class="xl">Em 6 de Junho de 2026, vamos nos reunir em Chania, Creta, para celebrar uma história — a nossa — junto de quem faz parte dela.</p>
+				<div class="grid2">
+				<h3>[AONDE]</h3>
+				<p>Nossa cerimônia se iniciara na Chapel of the Holy Apostles, uma capelinha ortodoxa as 18h. Em seguida, vamos seguir até o Metohi Istoria: um castelinho veneziano do século XIV, onde nos reuniremos para jantar e celebrar com todos que fazem parte da nossa historia.</p>
+				</div>
+				<h3>[ENDEREÇOS]</h3>
+				<p class="xs">Nossa cerimonia terá dois momentos e você pode escolher aonde prefere encontrar a gente. O primeiro momento sera uma cerimonia religiosa tradicional numa igreja mas para quem quiser pode nos encontrar so no segundo momento para celebrar em um castelinho. <b>[Momento 01] Chapel of the Holy Apostles</b>  PEO Kissamou Chanion 142 Galatas 731 00 Chania, Creta - Grécia <b>[Momento 02] Metohi Istoria</b> Agiou Eleftheriou 66, Nerokouros  731 00 Chania, Creta - Grécia</p>
+			</div>
+			<div class="spanhalf">
+				<h3>[QUANDO]</h3>
+				<p class="xl">06.06.2026<br />A partir das 18H. - 2H</p>
+			</div>
+			<div class="spanhalf">
+				<h3>[TRAJES]</h3>
+				<p class="xl">Sugerimos trajes leves, elegantes e com conforto.</p>
+			</div>
+		</section>
+
+		<section class="grid" id="rsvp">
+			<div class="row-flex" id="rsvp_title">
+				<h3>[2] rsvp</h3>
+				<span>Preencha seus dados</span>
+			</div>
+				<div class="row-flex">
+									<div class="empty"></div>
+				<div class="empty"></div>
+				<h3>Até</h3>
+				<span style="text-align: right;">Fev.2026</span>
+			</div>
+
+  <form action="https://app.heysheet.in/api/s/wfzi7pumq0" method="POST" id="rsvpForm">
+	<!--
+	<input type="hidden" name="subject" value="Nova resposta RSVP Julia e Rodrigo">
+    <input type="checkbox" name="botcheck" id="" style="display: none;">
+          <input type="hidden" name="access_key" value="c550c36b-84d1-405d-b51d-a1b8ebf980db">-->
+      <!-- Section 01: Status -->
+      <div class="section" id="form_status">
+        <div class="section-number">01</div>
+        <div class="section-title">Status</div>
+        <div class="status-options">
+          <div class="status-option">
+            <input type="radio" id="status-sim" name="status" value="Vai">
+            <label for="status-sim">ESTAREI LÁ</label>
+          </div>
+          <div class="status-option">
+            <input type="radio" id="status-nao" name="status" value="Não vai">
+            <label for="status-nao">NÃO VOU CONSEGUIR</label>
+          </div>
+		  
+        </div>
+				<div class="empty"></div>
+
+      </div>
+
+      <!-- Section 02: Informação -->
+      <div class="section" id="form_info">
+        <div class="section-number">02</div>
+        <div class="section-title">Informação</div>
+		<div class="empty"></div>
+		<div class="empty"></div>
+		<div class="empty"></div>
+	  </div>
+
+	  	<div class="subsection">
+        <div class="info-group">
+          <div class="info-label">[A]</div>
+		  <div class="input-pair-labels">
+			<span>Nome completo</span>
+			<span>Acompanhante</span>
+		  </div>
+          <div class="input-pair">
+            <input type="text" name="nome_completo" placeholder="Nome completo" required>
+            <input type="text" name="acompanhante" placeholder="Acompanhante">
+          </div>
+        </div>
+
+        <div class="info-group">
+          <div class="info-label">[B]</div>
+		    <div class="input-pair-labels">
+			<span>Telefone</span>
+			<span>E-mail</span>
+		  </div>
+          <div class="input-pair">
+            <input type="tel" name="telefone" placeholder="Telefone" required>
+            <input type="email" name="email" placeholder="E-mail" required>
+          </div>
+        </div>
+
+        <div class="info-group">
+          <div class="info-label">[C]</div>
+		   <div class="input-pair-labels">
+			<span>Endereço</span>
+			</div>
+          <input type="text" name="endereco" placeholder="Endereço">
+        </div>
+      </div>
+
+      <!-- Section 03: Extra -->
+      <div class="section" id="form_extra">
+        <div class="section-number">03</div>
+        <div class="section-title">Extra</div>
+        <div class="section-title">Se quiser acrescentar algo</div>
+		<textarea autocomplete="off" name="observacoes_extra" placeholder="Observações"></textarea>
+      </div>
+
+      <!-- Submit Button -->
+      <div class="submit-container">
+        <button type="submit">Enviar</button>
+      </div>
+
+    </form>
+
+		      <div id="result">Teste</div>
+
+
+		</section>
+
+
+		<section class="grid" id="dicas">
+			<div class="spanhalf">
+				<img src="imgs/tips/1.png">
+			</div>
+<div class="spanhalf">
+				<h2>[03] DICAS</h2>
+				<p class="xl">Aqui fizemos uma seção de dicas e utilidades para todos, mas tambem se tiverem alguma duvida podem entrar em contato com a gente.</p>
+				<div class="grid2">
+				<h3>[TRANSPORTE]</h3>
+				<p>Voos Chania tem uma aeroporto internacional (CHA), e há diversas maneiras de chegar lá. Abaixo listamos algumas das principais:</p>
+				<div class="empty"></div>
+				<ol>
+					<li>Caso prefira ir “direto”, a opção mais rápida é via British Airways: Londres para Chania, chegando com apenas 1 escala.</li>
+					<li>Se quiser incluir Atenas, vá até ATH e siga para Chania; há voos diários e acessíveis. Do Brasil, as principais cias chegam a Atenas com 1 escala.</li>
+					<li>Outra alternativa é voar a um hub europeu (Paris, Frankfurt, 
+Amsterdã, etc.) e seguir com low cost (ex.: Ryanair). Atenção: maior chance de atrasos/cancelamentos que nas cias tradicionais.</li>
+					</ol>
+				</div>
+			</div>
+			
+			<div class="spanhalf">
+<p><i>Balsas Chania</i> tem uma aeroporto internacional (CHA), e há diversas maneiras de chegar lá. Abaixo listamos algumas das principais: </p>
+				</div>
+
+				<div class="spanhalf">
+					<ol>
+					<li>A principal rota parte do Porto de Pireus (Atenas) rumo ao Porto de Souda (Chania). A viagem leva 8–9 horas, quase sempre à noite — ótimo pra dormir e já acordar em Creta.</li>
+					<li>Também é possivel ir de balsa até Heraklion e, de lá, seguir para Chania de carro, ônibus ou transfer. As passagens estão no Ferryhopper (várias cias e horários). Na alta temporada, vale reservar antes porque os lugares somem rápido.</li>
+					</ol>
+				</div>
+
+				<div class="spanfull">
+					<p>Carro Alugar um carro traz a vantagem de explorar Creta com liberdade. <b>Mas atenção:</b> as estradas podem ser estreitas e sinuosas, a sinalização nem sempre é clara e o trânsito exige cautela e paciência.</p>
+				</div>
+				
+
+<div class="spanhalf">
+				<div class="grid2">
+				<h3>[ESTADIA]</h3>
+				<p><i>Hoteis Chania</i> tem opções de hospedagem para diferentes estilos de viagem — de hotéis boutique no centro histórico a resorts à beira-mar. Seguem algumas sugestões:</p>
+				<div class="empty"></div>
+				<ol class="nobreak">
+  <li><a href="https://ambassadorsresidencechania.com/" target="_blank">Ambassadors Residence</a></li>
+  <li><a href="https://serenissima.gr/" target="_blank">Serenissima Boutique Hotel</a></li>
+  <li><a href="https://scaladefaro.com/" target="_blank">Scala de Faro</a></li>
+  <li><a href="https://www.casadelfino.com/" target="_blank">Casa Delfino Hotel & Spa</a></li>
+  <li><a href="https://www.monasteryestate.com/monastery-estate-venetian-harbor/" target="_blank">Monastery Estate Venetian Harbor</a></li>
+  <li><a href="https://thetannerieshotel.gr/" target="_blank">The Tanneries Hotel & Spa</a></li>
+  <li><a href="https://sansal.gr/" target="_blank">SanSal Boutique Hotel</a></li>
+  <li><a href="https://www.hilton.com/en/hotels/herchup-chania-flair-boutique-hotel/" target="_blank">Chania Flair</a></li>
+  <li><a href="https://domesresorts.com/domesnoruzchania/" target="_blank">Domes Noruz Chania</a></li>
+  <li><a href="https://www.monasteryestate.com/monastery-estate-retreat/" target="_blank">Domes Zeen Chania</a></li>
+  <li><a href="https://brownhotels.com/crete/chania" target="_blank">Isla Brown Chania</a></li>
+  <li><a href="https://www.metohi-kindelis.gr/" target="_blank">Metohi Kindelis</a></li>
+  <li><a href="https://www.monasteryestate.com/monastery-estate-retreat/" target="_blank">Monastery Estate Retreat</a></li>
+</ol>
+				</div>
+			</div>
+
+				<div class="spanhalf" style="align-items: flex-end;">
+				<img src="imgs/tips/2.png">
+			</div>
+
+				<div class="spanhalf">
+				<img src="imgs/tips/3.png">
+			</div>
+
+			<div class="spanhalf">
+				<p><i>Alugueis de temporada</i> Chania oferece ótimas opções para quem prefere a liberdade de um apartamento ou casa de temporada. Seguem algumas sugestões:</p>
+<ol class="nobreak">
+	<li><a href="https://www.koresvillas.com/" target="_blank">Kores Boutique Houses</a></li>
+  <li><a href="https://www.booking.com/hotel/gr/casa-minaretto.html" target="_blank">Casa Minaretto Bijou Luxury Home</a></li>
+  <li><a href="https://domicilechania-venetian-residence.chaniatownhotels.com/en/" target="_blank">Domicilechania – Venetian Residence</a></li>
+  <li><a href="https://www.deziree-house.gr/" target="_blank">Deziree: Historic Home (Old Town Chania)</a></li>
+  <li><a href="https://www.antelsuites.gr/" target="_blank">ANTEL Suites & Apartments</a></li>
+  <li><a href="https://trianonapartments.gr/" target="_blank">Trianon Luxury Apartments & Suites</a></li>
+  <li><a href="https://rubyluxurysuites.gr/" target="_blank">Ruby Luxury Suites</a></li>
+  <li><a href="https://www.booking.com/hotel/gr/frida.html" target="_blank">Frida Apartments</a></li>
+</ol>
+				</div>
+			</div>
+			
+			<div class="spanfull">
+								<h3>[VISITAS RECOMENDADAS]</h3>
+			</div>
+
+			<div class="spanfull big_list">
+				<ol class="xl">
+					<li data-img="/imgs/hover/1.jpg">Chania Old Town</li>
+					<li data-img="/imgs/hover/2.jpg">Falassarna Beach</li>
+					<li data-img="/imgs/hover/3.jpg">Elafonissi Beach</li>
+					<li data-img="/imgs/hover/4.jpg">Milia Traditional Village</li>
+					<li data-img="/imgs/hover/5.jpg">Sfakia (South of Crete)</li>
+					<li data-img="/imgs/hover/6.jpg">Loutro (South of Crete)</li>
+					<li data-img="/imgs/hover/7.jpg">Frangokastello (South of Crete)</li>
+					<li data-img="/imgs/hover/8.jpg">Samaria Gorge</li>
+					<li data-img="/imgs/hover/9.jpg">Imbros Gorge</li>
+					<li data-img="/imgs/hover/10.jpg">Balos/ Gramvousa</li>
+					<li data-img="/imgs/hover/11.jpg">Paleochora</li>
+					<li data-img="/imgs/hover/12.jpg">Rethymnon Town</li>
+				</ol>
+				<img src="/imgs/hover/1.jpg">
+			</div>
+			
+			
+		</section>
+
+
+		<section class="grid" id="contribuicao">
+			<div class="spanhalf empty"></div>
+			<div class="spanhalf">
+				<h2>[04] DE/PARA</h2>
+				<p class="xl">O nosso maior presente será compartilhar esse momento com vocês.</p>
+				<p>Como a celebração será fora, optamos por não ter lista de presentes. Em vez disso, criamos um cofrinho virtual para reunir gestos de carinho que nos acompanharão nessa nova etapa.</p>
+				<p class="xs_comment">*Como a celebração será fora, optamos por não ter lista de presentes. Em vez disso, criamos um cofrinho virtual para reunir gestos de carinho que nos acompanharão nessa nova etapa.</p>
+				<a href="/index.html" class="button">Clique aqui para contribuir</a>
+			</div>
+		</section>
+	</main>
+
+<footer>
+	<div class="footer_wrapper">
+	<div class="mainlogo">
+		<img src="/assets/logos/logofooter.svg">
+	</div>
+	<div class="rodapediv rodape1">
+		<span><b>CHANIA CRETA GRECIA</b><br/>06.06.2026
+		</span>
+	</div>
+	<div class="rodapediv rodape2">
+		<span><b>CHANIA CRETA GRECIA</b><br/><a href="mailto:acessoria@fica.com.br">acessoria@fica.com.br</a><br/><a href="#">+55 11 9999-9999</a>
+		</span>
+	</div>
+	<div class="rodapediv rodape3">
+		<span><b>DÚVIDAS</b><br/><a href="mailto:acessoria@fica.com.br">acessoria@fica.com.br</a><br/><a href="#">+55 11 9999-9999</a>
+		</span>
+	</div>
+	<div class="rodapediv rodape4">
+		<span>Development @moorimoto<br/>Design @jugontier<br/><b>All rights reserved.</b>
+		</span>
+	</div>
+	</div>
+</footer>	
+
+	<script src="scripts/main.js"></script>
+
+</body>
