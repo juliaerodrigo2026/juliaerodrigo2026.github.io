@@ -65,52 +65,34 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Initial check
     updateParallax();
-});
 
 
 
-
-document.addEventListener('DOMContentLoaded', function() {
+    //MENU LINKS
     const menuLinks = document.querySelectorAll('nav ul a');
-    
-    // Smooth scroll without changing URL
-    menuLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
-            e.preventDefault(); // Prevent default anchor behavior
-            
-            const targetId = this.getAttribute('href').substring(1); // Remove the #
-            const targetSection = document.getElementById(targetId);
-            
-            if (targetSection) {
-                // Get the element's position including its margin
-                const rect = targetSection.getBoundingClientRect();
-                const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-                const marginTop = parseInt(window.getComputedStyle(targetSection).marginTop);
-                
-                window.scrollTo({
-                    top: rect.top + scrollTop - marginTop,
-                    behavior: 'smooth'
-                });
-            }
-        });
-    });
     
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
-            // Obtém o ID da seção sendo observada
+            // ObtÃ©m o ID da seÃ§Ã£o sendo observada
             const id = entry.target.getAttribute('id');
             
             // Encontra o link correspondente no menu
             const menuLink = document.querySelector(`nav ul a[href="#${id}"]`);
             
+            if (entry.isIntersecting) {
+                menuLink.classList.add('active');
+
+            } else {
+                menuLink.classList.remove('active');
+            }
         });
     }, {
-        root: null, // observa em relação à viewport
+        root: null, // observa em relaÃ§Ã£o Ã  viewport
         rootMargin: '0px',
-        threshold: 0.2 // 20% da seção precisa estar visível
+        threshold: 0.2 // 20% da seÃ§Ã£o precisa estar visÃ­vel
     });
     
-    // Observa cada seção referenciada no menu
+    // Observa cada seÃ§Ã£o referenciada no menu
     menuLinks.forEach(link => {
         const hash = link.getAttribute('href');
         if (hash.startsWith('#')) {
@@ -121,6 +103,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
 
 
 
