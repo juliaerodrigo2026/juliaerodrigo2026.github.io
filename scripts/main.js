@@ -106,8 +106,29 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
+//HEADER CALC
+function setHeaderHeight() {
+  const headerHeight = $('header').outerHeight();
+  $(':root').css('--headerheight', headerHeight + 'px');
+}
+
+function debounce(func, wait) {
+  let timeout;
+  return function() {
+    clearTimeout(timeout);
+    timeout = setTimeout(() => func.apply(this, arguments), wait);
+  };
+}
+
+
+$(window).on('resize', debounce(setHeaderHeight, 250));
+
+
+
 
 $(document).ready(function () {
+
+      setHeaderHeight();
 
 
     //HOVER BIG LIST
@@ -141,9 +162,20 @@ $(window).on('scroll', function() {
       if ($(window).scrollTop() >= 200) {
         $main.stop().addClass('scrolled');
         console.log('added scrolled');
+        
+        
+          $('#logo_julia').attr('src', 'assets/logos/logo_julia_mobile.svg');
+          $('#logo_rodrigo').attr('src', 'assets/logos/logo_rodrigo_mobile.svg');
+        
       } else {
         $main.stop().removeClass('scrolled');
         console.log('removed scrolled');
+        
+        // Restore original logos
+        
+          $('#logo_julia').attr('src', 'assets/logos/logo_julia.svg');
+          $('#logo_rodrigo').attr('src', 'assets/logos/logo_rodrigo.svg');
+        
       }
       
       ticking = false;
