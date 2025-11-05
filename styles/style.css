@@ -888,8 +888,9 @@ section#video video {
 
 
     /* rsvp form */
-#rsvp {
+#rsvp *, .button {
     font-weight: normal;
+    font-size: calc(var(--fontsizexs) + 1pt)!important;
 }
 
 
@@ -918,6 +919,14 @@ section#video video {
         display: flex;
     flex-direction: column;
     flex: 3;
+    }
+
+    .row-flex>* {
+        flex: initial;
+    }
+
+    #rsvp .row-flex {
+        justify-content: space-between;
     }
 
     #rsvpForm .section::after, #rsvpForm .submit-container {
