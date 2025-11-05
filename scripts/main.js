@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 document.addEventListener('DOMContentLoaded', function() {
-    const images = document.querySelectorAll('.spanhalf img');
+const images = document.querySelectorAll('.spanhalf img:not(.static)');
     
     // Intersection Observer for fade-in effect
     const observerOptions = {

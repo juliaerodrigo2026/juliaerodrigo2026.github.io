@@ -888,6 +888,11 @@ section#video video {
 
 
     /* rsvp form */
+#rsvp {
+    font-weight: normal;
+}
+
+
     #rsvp, #rsvpForm {
         row-gap: var(--1un);
     }
